@@ -43,6 +43,7 @@ app.use(
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.static("../public"));
 
 // Health check
 app.get("/api", async (req, res) => {
