@@ -46,6 +46,11 @@ app.use(cookieParser());
 app.use(express.static("../public"));
 
 // Health check
+app.get("/", async (req, res) => {
+  await initDB();
+  res.json({ message: "API is running..." });
+});
+
 app.get("/api", async (req, res) => {
   await initDB();
   res.json({ message: "API is running..." });

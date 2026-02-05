@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Building...'",
   "builds": [
     {
       "src": "api/handler.js",
@@ -8,10 +7,6 @@
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "api/handler.js"
-    },
     {
       "src": "/(.*)",
       "dest": "api/handler.js"
